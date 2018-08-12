@@ -1,6 +1,5 @@
 ---
 title: Beego源码解析(三)-HTTP请求处理流程
-categories: GoWeb框架
 date: 2016-08-02 14:34:33
 tags:
   - Beego
@@ -19,7 +18,7 @@ tags:
 在第一篇文章中就曾提到过,在启动 Beego应用时都是通过调用 beego.Run()方法启动.而这个方法在设置了6个回到调函数后会进入 app.Run()方法(app就是我们 Beego应用程序的一个实例,在 app.go的 init()函数中被初始化)  
 
 ### app.Run()函数
-app.Run()函数就是在一切都准备好之后进入 HTTP请求循环的一个启动函数了,函数并不是很长而且逻辑比较简单,结合注释看下即可 
+app.Run()函数就是在一切都准备好之后进入 HTTP请求循环的一个启动函数了,函数并不是很长而且逻辑比较简单,结合注释看下即可
 beego/app.go:
 ```Go
 // beego程序启动函数
@@ -439,7 +438,7 @@ Admin:
 		context.ResponseWriter.WriteHeader(context.Output.Status)
 	}
 }
-``` 
+```
 
 一个HTTP请求的处理流程大概就是这个样子,先查找静态路由让后再查找用户定义的路由规则,调用相应规则的处理函数
 

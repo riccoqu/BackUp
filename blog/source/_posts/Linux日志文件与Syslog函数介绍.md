@@ -1,7 +1,6 @@
 ---
 title: Linux日志文件与Syslog函数介绍
 date: 2016-03-24
-categories: Linux
 tags:
  - Linux
  - 服务器

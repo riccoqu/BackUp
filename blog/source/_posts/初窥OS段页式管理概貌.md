@@ -1,7 +1,7 @@
 ---
 title: 初窥OS段页式管理概貌
 date: 2015-11-13
-categories: 操作系统
+reward: true
 tags:
  - OS
 ---

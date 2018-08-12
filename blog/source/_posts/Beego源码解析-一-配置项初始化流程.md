@@ -1,6 +1,5 @@
 ---
 title: Beego源码解析(一)——配置项初始化流程
-categories: GoWeb框架
 date: 2016-07-30 00:06:44
 tags:
   - Beego
@@ -14,15 +13,15 @@ tags:
 
 # 动力
 最近在看 Beego的源码,我选择 Beego一方面是因为我对 Go语言很感兴趣,另一方面在 GoWeb方面 Beego也做的十分出色。模块化的设计、完善的文档和社区、强大的功能都是我对于 Beego下手的推动力。  
-对于一个解析项目的开始,我都想从配置来下手。所以这篇文章也是主要介绍了 Beego在启动过程中配置项的初始化过程。这也是关于 Beego的第一篇文章,日后我们慢慢补坑的。 
+对于一个解析项目的开始,我都想从配置来下手。所以这篇文章也是主要介绍了 Beego在启动过程中配置项的初始化过程。这也是关于 Beego的第一篇文章,日后我们慢慢补坑的。
 
 <!--more-->
 
 关于 **Beego源码的注释**可以见我的 **[Github](https://github.com/riccoqu/Beego-Comments)** 我会很努力的慢慢完善它的 :D
 
 # beego配置项的解析
-在开始之前先让我们用 bee工具创建一个 Beego的应用。  项目的结构大概是这样的 
-``` 
+在开始之前先让我们用 bee工具创建一个 Beego的应用。  项目的结构大概是这样的
+```
 myproject
 |—conf
 	 |—app.conf
@@ -45,10 +44,10 @@ myproject
 可以看到 那个`conf/app.conf`就是项目的默认配置文件了  
 在配置文件中的配置项都是采用 **键值对** 的方式,即 `key = value`
 
-我们看下 beego中对于关于配置的一些文件 
+我们看下 beego中对于关于配置的一些文件
 beego目前支持 INI、XML、JSON、YAML格式的配置文件解析,默认是 INI格式的解析
 `beego/config`这个包内放的就是不同解析器的文件  
-`beego/config.go`这个文件就是用来初始化配置项的文件 
+`beego/config.go`这个文件就是用来初始化配置项的文件
 
 ### 程序中的配置项
 在 beego的启动过程中,有两个变量对配置项的初始化很重要,它们都在 beego/config.go:106被声明
@@ -56,7 +55,7 @@ beego目前支持 INI、XML、JSON、YAML格式的配置文件解析,默认是 I
 var	(
 	BConfig *Config
 	AppConfig *beegoAppConfig
-	
+
 	...配置文件的路径等变量
    )
 ```
@@ -70,7 +69,7 @@ type beegoAppConfig struct{
 }
 ```
 明白了吧,其实它就是 config包中 Configer接口的封装.所以在 beego/config.go文件后面部分都是在调用这个接口从而实现了 beegoAppConfig的很多方法  
-关于 config.Configer接口我们可以在 config/config.go:50找到,它定义了16种在解析配置项中可能用到的方法 
+关于 config.Configer接口我们可以在 config/config.go:50找到,它定义了16种在解析配置项中可能用到的方法
 不过正在看源码的同学可能会发现在 Configer接口下还有个 Config接口,那么它又是干什么的呢?
 ```Go
 type Config interface{

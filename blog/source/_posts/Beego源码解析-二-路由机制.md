@@ -1,6 +1,5 @@
 ---
 title: Beego源码解析(二)-路由机制
-categories:	GoWeb框架
 date: 2016-08-01 00:22:08
 tags:
   - Beego
@@ -287,7 +286,7 @@ func (t *Tree) AddRouter(pattern string,runObject interface{}) {
 }
 ```
 可以看出它只是把 pattern中的路径进行了切割(例如"/admin/users"切割成"["admin","users"]"),并返回一个 string类型的数组切片  
-那么接下来的目的就很明确了,我们需要使用 Tree提供的 addseg方法给路由树**添加节点** 
+那么接下来的目的就很明确了,我们需要使用 Tree提供的 addseg方法给路由树**添加节点**
 
 这个函数也是最终的一个函数了,函数的逻辑可以看注释
 
