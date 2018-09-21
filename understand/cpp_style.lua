@@ -7,8 +7,7 @@ return {
 				back = "#3a3a3a"
 			},
 			comment = {
-				bold = true,
-				fore = "#92ff2c",
+				fore = "#369e0f",
 				italic = true
 			},
 			docComment = {
@@ -16,12 +15,11 @@ return {
 				italic = true
 			},
 			docKeyword = {
-				bold = true,
 				fore = "#663300",
 				italic = true
 			},
 			doubleQuotedString = {
-				fore = "#209e1f"
+				fore = "#eaffff"
 			},
 			error = {
 				back = "#ff0000",
@@ -42,30 +40,29 @@ return {
 				eolfilled = true
 			},
 			keyword = {
-				bold = true,
 				fore = "#9e00ff"
 			},
 			label = {
 				fore = "#800000"
 			},
 			number = {
-				fore = "#00d0d0"
+				fore = "#ce000c"
 			},
 			operator = {
-				bold = true
+
 			},
 			preprocessor = {
-				bold = true,
 				fore = "#dbc900"
 			},
 			ref = {
-				back = "#92ff2c"
+				back = "#edf8ff",
+				fore = "#e00010"
 			},
 			selection = {
 				back = "#4d4d4d"
 			},
 			singleQuotedString = {
-				fore = "#41aa11"
+				fore = "#ffffff"
 			},
 			unclosedDoubleQuotedString = {
 				back = "#800000",
@@ -76,7 +73,7 @@ return {
 				eolfilled = true
 			},
 			whitespace = {
-				fore = "#808080"
+				fore = "#3c3c3c"
 			}
 		}
 	},
@@ -86,8 +83,8 @@ return {
 			fore = "#e3e3e3"
 		},
 		[33] = {
-			back = "#a0a0a0",
-			fore = "#cfcb64"
+			back = "#000000",
+			fore = "#fcffff"
 		},
 		[34] = {
 			back = "#006100",
@@ -139,7 +136,7 @@ return {
 				},
 				globalVariableNames = {
 					bold = true,
-					fore = "#d60010"
+					fore = "#fc4f1f"
 				},
 				localVariableNames = {
 					fore = "#f2ffff"
