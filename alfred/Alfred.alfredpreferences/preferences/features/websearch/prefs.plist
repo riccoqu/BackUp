@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>05EB458B-84E5-4C72-B132-B2BE777AE9BE</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>cd</string>
+			<key>text</key>
+			<string>Search Collins Dictionary for '...'</string>
+			<key>url</key>
+			<string>https://www.collinsdictionary.com/dictionary/english/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>0D86F455-9ACA-441F-A150-D4BAFF3EF3EE</key>
 		<dict>
 			<key>enabled</key>
